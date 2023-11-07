@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import Register from './pages/Register/Register';
 import Navigation from './components/shared/Navigation/Navigation';
 import Login from './pages/Login/Login';
+import Authenticate from './pages/Authenticate/Authenticate';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
       <Navigation/>
       <Routes>
         <Route path='/' exact element={<Home/>}/>
-        <Route path='/register' exact element={<Register/>}/>
-        <Route path='/login' exact element={<Login/>}/>
+        {/* <Route path='/register' exact element={<Register/>}/>
+        <Route path='/login' exact element={<Login/>}/> */}
+        <Route path='/authenticate'  element={<Authenticate/>}/>
       </Routes>
       </BrowserRouter>
     </div>
