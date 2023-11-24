@@ -1,11 +1,46 @@
-import React from 'react'
+import React, { useState } from "react";
+import Phone from "./Phone/Phone";
+import Email from "./Email/Email";
+import styles from "./StepEmail.module.css";
 
-const StepPhoneEmail = ({onNext}) => {
+const phoneEmailMap = {
+  phone: Phone,
+  email: Email,
+};
+
+const StepPhoneEmail = ({ onNext }) => {
+  const [type, setType] = useState("phone");
+
+  const Component = phoneEmailMap[type];
+
+  function onNext() {}
+
   return (
-    <div>StepPhoneEmail
-      <button onClick={onNext}>next</button>
-    </div>
-  )
-}
+    <>
+      <div className={styles.cardWrapper}>
+        <div>
+        <div className={styles.buttonWrap}>
+          <button
+            onClick={() => {
+              setType("phone");
+            }}
+          >
+            Phone
+          </button>
+          <button
+            onClick={() => {
+              setType("email");
+            }}
+          >
+            Email
+          </button>
+        </div>
+        <Component onNext={onNext} />
+        </div>
+      </div>
+      
+    </>
+  );
+};
 
-export default StepPhoneEmail
+export default StepPhoneEmail;

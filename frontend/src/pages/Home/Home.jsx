@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Home.module.css";
 import { useNavigate } from "react-router-dom";
-import {Link} from "react-router-dom"
 import Card from "../../components/shared/Card/Card";
 import Button from "../../components/shared/Button/Button";
 
@@ -14,8 +13,7 @@ const Home = () => {
 };
 const navigate = useNavigate()
 const startRegistor = (e)=>{
-  console.log("but")
-  navigate("/register")
+  navigate("/authenticate")
 }
   return (
    <div className={styles.cardWrapper}>
@@ -26,12 +24,11 @@ const startRegistor = (e)=>{
         nothing breaks.
       </p>
       <div>
-        <Button onClick={startRegistor} text={"Get your Username"}></Button>
+        <Button onClick={startRegistor} text={"Let's go"}></Button>
       </div>
       <div className={styles.signinWrapper}>
         <span className={styles.hasInvite}>
-          Have a invite text
-          <Link style={signInLinkStyle} to="/login">Sign in</Link>
+          Have a invite text ?
         </span>
       </div>
     </Card>
