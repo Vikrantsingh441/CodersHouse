@@ -5,7 +5,7 @@ import Card from '../../../../components/shared/Card/Card'
 const Phone = () => {
   return (
     <>
-        <Card title={"Welcome to Codershouse !"} icon={"logo"}>
+        <Card title={"Enter your phone number !"} icon={"phone"}>
       <div>
         <Button text={"Next"}></Button>
       </div>
