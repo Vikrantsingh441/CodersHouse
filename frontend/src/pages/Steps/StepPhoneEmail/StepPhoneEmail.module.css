@@ -1,9 +1,6 @@
 .cardWrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 6rem;
-}
+    composes: cardWrapper from "../../../App.module.css";
+} 
 .buttonWrap{
     margin-bottom: 20px;
     display: flex;
@@ -23,4 +20,15 @@
 
 .tabButton:last-child {
     margin-left: 20px;
+}
+
+.active{
+    background: #0077ff;
+}
+
+.actionButtonWrap{
+    margin-top: 40px;
+}
+.bottomParagraph{
+    composes: bottomParagraph from "../../../App.module.css";
 }

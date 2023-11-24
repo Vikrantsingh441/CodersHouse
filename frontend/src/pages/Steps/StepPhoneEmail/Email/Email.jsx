@@ -1,8 +1,26 @@
-import React from 'react'
+import React,{useState} from 'react'
+import Button from '../../../../components/shared/Button/Button'
+import Card from '../../../../components/shared/Card/Card'
+import TextInput from '../../../../components/shared/TextInput/TextInput'
+import styles from '../StepPhoneEmail.module.css'
 
-const Email = () => {
+const Email = ({onNext}) => {
+  const [email, setEmail] = useState('')
   return (
-    <div>Email</div>
+    <>
+    <Card title={"Enter your email !"} icon={"email-emoji"}>
+    <TextInput value={email} onchange={(e) => setEmail(e.target.value)} />
+        <div>
+        <div className={styles.actionButtonWrap}>
+            <Button onClick={onNext} text={"Next"}></Button>
+          </div>
+          <p className={styles.bottomParagraph}>
+            By entering your email, you're agreeing to our Terms of
+            Service and Privacy Policy. Thanks!
+          </p>
+        </div>
+      </Card>
+    </>
   )
 }
 
