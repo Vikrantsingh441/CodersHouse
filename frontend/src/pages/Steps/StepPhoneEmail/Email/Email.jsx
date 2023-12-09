@@ -9,7 +9,7 @@ const Email = ({onNext}) => {
   return (
     <>
     <Card title={"Enter your email !"} icon={"email-emoji"}>
-    <TextInput value={email} onchange={(e) => setEmail(e.target.value)} />
+    <TextInput value={email} onChange={(e) => setEmail(e.target.value)} />
         <div>
         <div className={styles.actionButtonWrap}>
             <Button onClick={onNext} text={"Next"}></Button>
