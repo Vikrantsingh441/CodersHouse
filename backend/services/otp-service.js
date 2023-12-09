@@ -23,12 +23,6 @@ class Otpservice {
     verifyOtp(hashedOtp,data) {
         let computedHash = hashService.hashOtp(data)
         return computedHash === hashedOtp
-
-        // if(computedHash===hashedOtp){
-        //     return true
-        // }else{
-        //     return false
-        // }
     }
 }
 
